@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Items(models.Model):
+class Item(models.Model):
 
     def __str__(self):
         return self.item_name
