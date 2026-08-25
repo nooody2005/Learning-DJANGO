@@ -10,7 +10,7 @@
             <div>{{item.item_desc}}</div>
             <div>
                 <a href="{% url 'myapp:update_item' item.id %}" class="bg-yellow-500 px-4 py-2 rounded-md font-bold text-white">Edit</a>
-                <a href=""  class="bg-red-500 px-4 py-2 rounded-md font-bold text-white">Delete</a>
+                <a href="{% url 'myapp:delete_item' item.id %}" class="bg-red-500 px-4 py-2 rounded-md font-bold text-white">Delete</a>
             </div>
 
         </div>
