@@ -3,7 +3,12 @@
 <ul>
     
     {% for item in item_list %}
-        <li>{{ item.item_name }} -> {{ item.item_desc }} -> {{ item.item_price }}</li>
+        <li>
+            <a href="/myapp/{{item.id}}">
+                
+                {{ item.item_name }} -> {{ item.item_desc }} -> {{ item.item_price }}
+            </a>
+        </li>
     {% endfor %}
        
 </ul>
