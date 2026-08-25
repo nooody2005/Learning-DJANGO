@@ -4,7 +4,7 @@
     
     {% for item in item_list %}
         <li>
-            <a href="/myapp/{{item.id}}">
+            <a href="{% url 'detail' item.id %}">
                 
                 {{ item.item_name }} -> {{ item.item_desc }} -> {{ item.item_price }}
             </a>
