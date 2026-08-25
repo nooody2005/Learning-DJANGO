@@ -18,6 +18,9 @@ def index(request):
     # return  HttpResponse(item_list)
     
 
+def detail(request,id):
+    return HttpResponse(f'This is the detail view for item {id}')
+
 def item(request):
     return HttpResponse("<h1>This is the item view</h1>")
 
