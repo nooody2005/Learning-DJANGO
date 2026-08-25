@@ -5,7 +5,7 @@
         {% for item in item_list %}
             <li>
                 <a href="{% url 'myapp:detail' item.id %}">
-                    
+                    <img src="{{item.item_image}}" alt="">
                     {{ item.item_name }} -> {{ item.item_desc }} -> {{ item.item_price }}
                 </a>
             </li>
