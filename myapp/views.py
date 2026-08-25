@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from .models import Item
 from .forms import ItemForm
@@ -31,7 +31,11 @@ def item(request):
     return HttpResponse("<h1>This is the item view</h1>")
 
 def create_item(request):
-    form = ItemForm()
+    form = ItemForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            return redirect('myapp:index')
     context = {
         'form' : form
     }
