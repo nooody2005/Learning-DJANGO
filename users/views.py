@@ -13,7 +13,8 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request,f'Welcome {username}, you registered successfully :)')
-            return redirect('myapp:index')
+            return redirect('login')
+            # return redirect('myapp:index')
 
     else:
         form =RegisterForm()
