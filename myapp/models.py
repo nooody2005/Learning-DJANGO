@@ -17,3 +17,10 @@ class Item(models.Model):
     item_desc = models.CharField()
     item_price = models.IntegerField()
     item_image = models.CharField(max_length=500,default='https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png')
+
+
+class Category(models.Model):
+    name= models.CharField(max_length=100)
+    added_on = models.DateField(auto_now=True)
+    def __str_(self):
+        return self.name
