@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Item(models.Model):
 
     def __str__(self):
-        return self.item_name
+        return self.item_name + ":" + str(self.item_price)
 
     def get_absolute_url(self):
         return reverse('myapp:index')
