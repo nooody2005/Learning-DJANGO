@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .managers import ItemManger
+from .managers import ItemManager
 from django.utils import timezone
 
 # Create your models here.
@@ -34,7 +34,8 @@ class Item(models.Model):
     is_deleted = models.BooleanField(default=False) # Soft delete flag
     deleted_at = models.DateTimeField(null=True,blank=True) # saves timestamp when deleted
 
-    objects = ItemManger()
+    objects = ItemManager()
+    all_objects = models.Manager()
 
 
 class Category(models.Model):
