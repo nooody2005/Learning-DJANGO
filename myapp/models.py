@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
+from .managers import ItemManger
 
 # Create your models here.
 class Item(models.Model):
@@ -23,6 +24,8 @@ class Item(models.Model):
     item_image = models.URLField(max_length=500,default='https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png')
     is_available= models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True) 
+
+    objects = ItemManger()
 
 
 class Category(models.Model):
