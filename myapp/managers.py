@@ -1,5 +1,12 @@
 from django.db import models
 
+# class ItemManager(models.Model):
+#     def get_queryset(self):
+#         return super().get_queryset().filter(is_deleted= False)
+
+
+
+
 class ItemManger(models.Manager):
     def cheap_items(self):
         return self.filter(item_price__lt=5)
