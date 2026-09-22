@@ -43,3 +43,5 @@ class Category(models.Model):
     added_on = models.DateField(auto_now=True)
     def __str_(self):
         return self.name
+
+
