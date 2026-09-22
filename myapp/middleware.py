@@ -1,3 +1,6 @@
+import time
+
+
 class LogRequestMiddleware:
     def __init__(self,get_response):
         self.get_response = get_response
@@ -9,6 +12,23 @@ class LogRequestMiddleware:
         # Process after view  
         print(f"[Middleware] Response Status: {response.status_code}")
         return response 
+
+
+class TimerMiddleware:
+    def __init__(self,get_response):
+        self.get_response = get_response
+
+    def __call__(self,request):
+        start = time.time()
+        response = self.get_response(request)
+        duration = time.time() - start
+
+        print(f"[Middleware] Request took {duration:.2f} seconds")
+        return response 
+
+
+
+
 
 
 
