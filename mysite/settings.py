@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'myapp.middleware.BlockIPMiddleware',
     'myapp.middleware.LogRequestMiddleware',
     'myapp.middleware.TimerMiddleware',
     'django.middleware.security.SecurityMiddleware',
