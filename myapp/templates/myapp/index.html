@@ -1,4 +1,5 @@
 {% extends 'myapp/base.html' %}
+{% load custom_filters %}
 {% block body %}
 {% load cache %}
     <div>
@@ -13,8 +14,10 @@
                 <div>{{ item.item_desc|lower|truncatechars:30}}</div>
                 <div>{{item.user_name}}</div>
                 <div>Added {{item.created_at|timesince}} ago</div>
-                <div class="text-green-700 font-bold">{{ item.item_price|add:50|floatformat:2}}</div>    
+                <div class="text-green-700 font-bold">{{ item.item_price|add:50|floatformat:2|currency}}</div> 
+                <div>Discounted price: {{ item.item_price|discount:10}}</div>   
             </div>
+            
             <div>
                 <a class="bg-red-500 text-white font-bold px-4 py-2 rounded-md" href="{% url 'myapp:detail' item.id %}">view Details</a>
             </div>
