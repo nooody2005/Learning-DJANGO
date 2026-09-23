@@ -20,7 +20,9 @@ from django.views.decorators.vary import vary_on_headers
 def index(request):
     # Getting items from database
     item_list = Item.objects.all()
+    print(item_list)
     paginator = Paginator(item_list,5)
+    print('paginator: ',paginator)
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
