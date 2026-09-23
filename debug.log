@@ -1,0 +1,34 @@
+Watching for file changes with StatReloader
+Fetching all items from the database
+Found 22 items
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Fetching an item with id: {id}
+Item found Sushi Platter ($12.99)
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Fetching an item with id: {id}
+Not Found: /myapp/70/
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Fetching an item with id: {id}
+Error fetching the item 70: No Item matches the given query.
+Not Found: /myapp/70/
+Not Found: /.well-known/appspecific/com.chrome.devtools.json

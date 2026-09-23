@@ -10,19 +10,26 @@ from django.urls import reverse_lazy
 from django.core.paginator import Paginator 
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_headers
+import logging
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
 
+logger = logging.getLogger(__name__)
+
+
 # @login_required
-@cache_page(60 * 15)
-@vary_on_headers("User-Agent")
+# @cache_page(60 * 15)
+# @vary_on_headers("User-Agent")
 def index(request):
     # Getting items from database
+    logger.info("Fetching all items from the database")
     item_list = Item.objects.all()
-    print(item_list)
+    logger.debug(f"Found {item_list.count()} items")
+    # print(item_list)
     paginator = Paginator(item_list,5)
-    print('paginator: ',paginator)
+    # print('paginator: ',paginator)
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
@@ -37,24 +44,32 @@ def index(request):
 
 #     # return  HttpResponse(item_list)
 
-class IndexClassView(ListView):
-    model= Item
-    template_name = "myapp/index.html"
-    context_object_name = 'item_list'
+# class IndexClassView(ListView):
+#     model= Item
+#     template_name = "myapp/index.html"
+#     context_object_name = 'item_list'
     
 
-# def detail(request,id):
-#     item = Item.objects.get(id=id)
-#     context = {
-#         'item' : item
-#     }
-#     return render(request,"myapp/detail.html",context)
-#     # return HttpResponse(f'This is the detail view for item {item}')
+def detail(request,id):
+    logger.info("Fetching an item with id: {id}")
+    try:
+        item = get_object_or_404(Item,pk=id)
+        # item = Item.objects.get(id=id)
+        logger.debug(f"Item found {item.item_name} (${item.item_price})")
+    except Exception as e:
+        logger.error("Error fetching the item %s: %s",id ,e)
+        raise
 
-class FoodDetail(DetailView):
-    model = Item
-    template_name = 'myapp/detail.html'
-    context_object_name= 'item'
+    context = {
+        'item' : item
+    }
+    return render(request,"myapp/detail.html",context)
+    # return HttpResponse(f'This is the detail view for item {item}')
+
+# class FoodDetail(DetailView):
+#     model = Item
+#     template_name = 'myapp/detail.html'
+#     context_object_name= 'item'
     
 
 def item(request):
