@@ -12,6 +12,7 @@ from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_headers
 import logging
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
 
 
 # Create your views here.
@@ -25,6 +26,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     # Getting items from database
     logger.info("Fetching all items from the database")
+    logger.info(f"User [{timezone.now().isoformat()}] {request.user} requested item list from {request.META.get('REMOTE_ADDR')}")
     item_list = Item.objects.all()
     logger.debug(f"Found {item_list.count()} items")
     # print(item_list)
