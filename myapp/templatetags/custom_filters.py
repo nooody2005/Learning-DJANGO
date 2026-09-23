@@ -10,3 +10,4 @@ def currency(value):
 @register.filter
 def discount(value,percentage):
     return int(value) - (int(value)*(int(percentage)/100))
+

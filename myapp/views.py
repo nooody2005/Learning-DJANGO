@@ -77,26 +77,26 @@ def detail(request,id):
 def item(request):
     return HttpResponse("<h1>This is the item view</h1>")
 
-# def create_item(request):
-#     form = ItemForm(request.POST or None)
-#     if request.method == "POST":
-#         if form.is_valid():
-#             form.save()
-#             return redirect('myapp:index')
-#     context = {
-#         'form' : form
-#     }
-#     return render(request,'myapp/item-form.html',context)
+def create_item(request):
+    form = ItemForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            return redirect('myapp:index')
+    context = {
+        'form' : form
+    }
+    return render(request,'myapp/item-form.html',context)
 
 
-class ItemCreateView(CreateView): 
-    # item_form.html
-    # food --> food_form.html
-    model = Item
-    fields = ['item_name','item_desc','item_price','item_image']
-    def form_valid(self,form):
-        form.instance.user_name = self.request.user
-        return super().form_valid(form) 
+# class ItemCreateView(CreateView): 
+#     # item_form.html
+#     # food --> food_form.html
+#     model = Item
+#     fields = ['item_name','item_desc','item_price','item_image']
+#     def form_valid(self,form):
+#         form.instance.user_name = self.request.user
+#         return super().form_valid(form) 
 
 
 # def update_item(request,id):
