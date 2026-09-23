@@ -7,7 +7,7 @@ app_name='myapp'
 
 urlpatterns = [
     # path('',views.IndexClassView.as_view(),name='index'),
-    path('',views.index ,name='index'),
+    path('', views.index ,name='index'),
     # path('item/',views.item),
     path('<int:pk>/',views.FoodDetail.as_view(),name='detail'),
     path('add/',views.ItemCreateView.as_view(),name='create_item'),

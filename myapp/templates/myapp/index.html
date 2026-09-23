@@ -1,6 +1,8 @@
 {% extends 'myapp/base.html' %}
 {% block body %}
+{% load cache %}
     <div>
+        {% cache 900 page_obj  %}
         {% for item in page_obj %}
         <div class="m-10 flex w-1/2 mx-auto">
             <div>
@@ -17,8 +19,9 @@
             </div>
             
         </div>
+        {% endfor %}
+        {% endcache%}
     </div>
-    {% endfor %}
     <div class="flex items-center justify-center space-x-4 py-4">
         {% if page_obj.has_previous  %}
         <a href="?page={{page_obj.previous_page_number}}" class="px-4 py-2 rounded-lg bg-grey-200 text-gray-00 hover:bg-gray-300 transition">Previous</a>
