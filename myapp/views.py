@@ -83,6 +83,10 @@ def create_item(request):
         if form.is_valid():
             form.save()
             return redirect('myapp:index')
+
+        else:
+            print(form.errors['item_price'])
+            
     context = {
         'form' : form
     }
