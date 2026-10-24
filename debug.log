@@ -623,3 +623,110 @@ D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
 Watching for file changes with StatReloader
 D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
 Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Fetching all items from the database
+User [2026-10-24T20:15:03.830077+00:00] AnonymousUser requested item list from 127.0.0.1
+Found 23 items
+Internal Server Error: /myapp/add/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\mysite\myapp\views.py", line 88, in create_item
+    print(form.errors['item_price'])
+          ~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'item_price'
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader

@@ -85,7 +85,8 @@ def create_item(request):
             return redirect('myapp:index')
 
         else:
-            print(form.errors['item_price'])
+            print(form.errors)
+            # print(form.errors['item_price'])
             
     context = {
         'form' : form
