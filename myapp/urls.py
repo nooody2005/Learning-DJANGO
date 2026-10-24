@@ -6,6 +6,10 @@ from django.views.decorators.cache import cache_page
 app_name='myapp'
 
 urlpatterns = [
+    # URL Patterns of API
+    path('items-json/',views.item_list_json,name='item_list_json'),
+
+    # URL Pattern of Django App
     # path('',views.IndexClassView.as_view(),name='index'),
     path('', views.index ,name='index'),
     # path('item/',views.item),

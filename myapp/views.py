@@ -13,11 +13,21 @@ from django.views.decorators.vary import vary_on_headers
 import logging
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
+from django.http import JsonResponse
 
 
 # Create your views here.
 
 logger = logging.getLogger(__name__)
+
+
+def item_list_json(request):
+    items = Item.objects.all().values("id","item_name","item_desc","item_price")
+    return JsonResponse(list(items),safe=False)
+
+
+
+
 
 
 # @login_required
