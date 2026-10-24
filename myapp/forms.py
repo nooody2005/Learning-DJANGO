@@ -11,5 +11,13 @@ class ItemForm(forms.ModelForm):
                     "item_desc":forms.TextInput(attrs={"placeholder":"e.g Margaretta pizza and Chessy","required":True}),
                     "item_price":forms.NumberInput(attrs={"placeholder":"100","required":True}),
                     "item_image":forms.URLInput(attrs={"placeholder":"http/www.nody.com","required":True})
+    
                 }
+
+
+    def clean_item_price(self):
+        price = self.cleaned_data["item_price"]
+        if price<0:
+            raise forms.ValidationError("Price Can't be negative")
+        return price
         
