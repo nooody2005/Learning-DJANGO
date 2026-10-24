@@ -850,3 +850,43 @@ D:\Progrmming\DJANGO\mysite\myapp\urls.py changed, reloading.
 Watching for file changes with StatReloader
 D:\Progrmming\DJANGO\mysite\myapp\urls.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /myapp/items-api/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\Progrmming\DJANGO\mysite\myapp\views.py", line 29, in item_list_api
+    serializer=ItemSerializer(items,many=True)
+                              ^^^^^
+NameError: name 'items' is not defined. Did you mean: 'item'?
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader

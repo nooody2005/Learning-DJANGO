@@ -14,11 +14,22 @@ import logging
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.http import JsonResponse
-
+from .serializers import ItemSerializer
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 # Create your views here.
 
 logger = logging.getLogger(__name__)
+
+
+@api_view(["GET"])
+def item_list_api(request):
+    items = Item.objects.all()
+    serializer=ItemSerializer(items,many=True)
+    return Response(serializer.data)
+
+
 
 
 def item_list_json(request):
