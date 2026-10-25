@@ -22,8 +22,7 @@ from rest_framework.decorators import api_view
 
 logger = logging.getLogger(__name__)
 
-
-# Get all items 
+# -------------------------------- API ------------------------------ 
 @api_view(["GET","POST"])
 def item_list_api(request):
     if request.method == "GET":
@@ -43,17 +42,33 @@ def item_list_api(request):
 
 
 
-
-# Get one item 
-@api_view(["GET"])
+@api_view(["GET","PUT","DELETE"])
 def item_detail_api(request,pk):
+
+    # Select the item
     item = Item.objects.get(pk=pk)
-    serializer=ItemSerializer(item)
-    return Response(serializer.data)
+
+    if request.method == "GET":
+        # Get one item with its id
+        serializer=ItemSerializer(item)
+        return Response(serializer.data)
+
+    elif request.method == "PUT":
+        # Update the item 
+        serializer=ItemSerializer(item,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+    elif request.method == "DELETE":
+        # Delete the item 
+        item.delete()
+        return Response({"Item deleted successfully ^_^"})
 
 
 
 
+# ---------------------------------------------------------------------
 
 def item_list_json(request):
     items = Item.objects.all().values("id","item_name","item_desc","item_price")
@@ -62,7 +77,7 @@ def item_list_json(request):
 
 
 
-
+# -----------------------------------------------------------------------------
 
 # @login_required
 # @cache_page(60 * 15)
