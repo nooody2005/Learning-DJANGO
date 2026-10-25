@@ -23,11 +23,34 @@ from rest_framework.decorators import api_view
 logger = logging.getLogger(__name__)
 
 
-@api_view(["GET"])
+# Get all items 
+@api_view(["GET","POST"])
 def item_list_api(request):
-    items = Item.objects.all()
-    serializer=ItemSerializer(items,many=True)
+    if request.method == "GET":
+        # Get all items
+        items = Item.objects.all()
+        # converting data to json format
+        serializer=ItemSerializer(items,many=True)
+        return Response(serializer.data)
+    elif  request.method == "POST":
+        # Create new item
+        serializer =  ItemSerializer(data=request.data)
+        # Check if json data for new item valid or not 
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data) 
+
+
+
+
+
+# Get one item 
+@api_view(["GET"])
+def item_detail_api(request,pk):
+    item = Item.objects.get(pk=pk)
+    serializer=ItemSerializer(item)
     return Response(serializer.data)
+
 
 
 

@@ -10,6 +10,8 @@ urlpatterns = [
     path('items-json/',views.item_list_json,name='item_list_json'),
     # URL patterns of API built with DRF
     path('items-api/',views.item_list_api,name='item-list-api'),
+    # URL pattren for single item 
+    path("api/items/<int:pk>",views.item_detail_api,name='item-detail-api'),
     # URL Pattern of Django App
     # path('',views.IndexClassView.as_view(),name='index'),
     path('', views.index ,name='index'),
