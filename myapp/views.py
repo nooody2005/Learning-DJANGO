@@ -18,77 +18,95 @@ from .serializers import ItemSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
+from rest_framework import generics
+
 
 # Create your views here.
 
 logger = logging.getLogger(__name__)
 
-# -------------------------------- API ------------------------------ 
+# =================================================== API =================================================
 
-# GET ALL THE ITEMS   & CREATE 
-class ItemListAPIView(APIView):
-    def get(self,request):
-        # Get all items
-        items = Item.objects.all()
-        # converting data to json format
-        serializer=ItemSerializer(items,many=True)
-        return Response(serializer.data)
+# ========================== CRUD using MIXIN ========================
+
+# get all & Create 
+class ItemListCreateAPI(generics.ListCreateAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
+
+
+# get the item & Update & Delete
+class ItemRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
+
+
+
+#  ================================================================     
+
+# # ------------------ CRUD Using Django view ------------------
+# #  GET ALL THE ITEMS   & CREATE 
+# class ItemListAPIView(APIView):
+#     def get(self,request):
+#         # Get all items
+#         items = Item.objects.all()
+#         # converting data to json format
+#         serializer=ItemSerializer(items,many=True)
+#         return Response(serializer.data)
         
-    def post(self,request):
-        # Create new item
-        serializer =  ItemSerializer(data=request.data)
-        # Check if json data for new item valid or not 
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data) 
+#     def post(self,request):
+#         # Create new item
+#         serializer =  ItemSerializer(data=request.data)
+#         # Check if json data for new item valid or not 
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data) 
 
 
 
-# GET THE ITEM & UPDATE & DELETE 
-class ItemDetailAPIView(APIView):
-    # Check if the existed or not 
-    def get_object(self,pk):
-        try:
-            return Item.objects.get(pk=pk)
-        except Item.DoesNotExist:
-            return None
 
-    def get(self,request,pk):
-        item = self.get_object(pk)
-        if not item:
-            return Response({"Error":"Item not Found (:"})
+# # GET THE ITEM & UPDATE & DELETE 
+# class ItemDetailAPIView(APIView):
+#     # Check if the existed or not 
+#     def get_object(self,pk):
+#         try:
+#             return Item.objects.get(pk=pk)
+#         except Item.DoesNotExist:
+#             return None
+
+#     def get(self,request,pk):
+#         item = self.get_object(pk)
+#         if not item:
+#             return Response({"Error":"Item not Found (:"})
         
-        # Get one item with its id
-        serializer=ItemSerializer(item)
-        return Response(serializer.data)
+#         # Get one item with its id
+#         serializer=ItemSerializer(item)
+#         return Response(serializer.data)
 
-    def put(self,request,pk):
-        item = self.get_object(pk)
-        if not item:
-            return Response({"Error":"Item not Found (:"})
+#     def put(self,request,pk):
+#         item = self.get_object(pk)
+#         if not item:
+#             return Response({"Error":"Item not Found (:"})
         
-        # Update the item 
-        serializer=ItemSerializer(item,data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
+#         # Update the item 
+#         serializer=ItemSerializer(item,data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data)
 
-    def delete(self,request,pk):
-        item = self.get_object(pk)
-        if not item:
-            return Response({"Error":"Item not Found (:"})
+#     def delete(self,request,pk):
+#         item = self.get_object(pk)
+#         if not item:
+#             return Response({"Error":"Item not Found (:"})
 
-        # Delete the item 
-        item.delete()
-        return Response({"Item deleted successfully ^_^"})
+#         # Delete the item 
+#         item.delete()
+#         return Response({"Item deleted successfully ^_^"})
         
-        
 
+#    ===============================================================================     
 
-
-
-
-
+#    --------------------- CRUD using old way -------------------   
 
 # @api_view(["GET","POST"])
 # def item_list_api(request):
@@ -133,6 +151,7 @@ class ItemDetailAPIView(APIView):
 #         return Response({"Item deleted successfully ^_^"})
 
 
+#    =====================================================================     
 
 
 # ---------------------------------------------------------------------
@@ -141,10 +160,10 @@ class ItemDetailAPIView(APIView):
 #     items = Item.objects.all().values("id","item_name","item_desc","item_price")
 #     return JsonResponse(list(items),safe=False)
 
-
-
-
 # -----------------------------------------------------------------------------
+
+#    ============================================== End of API =====================================   
+
 
 # @login_required
 # @cache_page(60 * 15)
