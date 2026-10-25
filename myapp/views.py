@@ -17,21 +17,24 @@ from django.http import JsonResponse
 from .serializers import ItemSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 
 # Create your views here.
 
 logger = logging.getLogger(__name__)
 
 # -------------------------------- API ------------------------------ 
-@api_view(["GET","POST"])
-def item_list_api(request):
-    if request.method == "GET":
+
+# GET ALL THE ITEMS   & CREATE 
+class ItemListAPIView(APIView):
+    def get(self,request):
         # Get all items
         items = Item.objects.all()
         # converting data to json format
         serializer=ItemSerializer(items,many=True)
         return Response(serializer.data)
-    elif  request.method == "POST":
+        
+    def post(self,request):
         # Create new item
         serializer =  ItemSerializer(data=request.data)
         # Check if json data for new item valid or not 
@@ -41,38 +44,102 @@ def item_list_api(request):
 
 
 
+# GET THE ITEM & UPDATE & DELETE 
+class ItemDetailAPIView(APIView):
+    # Check if the existed or not 
+    def get_object(self,pk):
+        try:
+            return Item.objects.get(pk=pk)
+        except Item.DoesNotExist:
+            return None
 
-@api_view(["GET","PUT","DELETE"])
-def item_detail_api(request,pk):
-
-    # Select the item
-    item = Item.objects.get(pk=pk)
-
-    if request.method == "GET":
+    def get(self,request,pk):
+        item = self.get_object(pk)
+        if not item:
+            return Response({"Error":"Item not Found (:"})
+        
         # Get one item with its id
         serializer=ItemSerializer(item)
         return Response(serializer.data)
 
-    elif request.method == "PUT":
+    def put(self,request,pk):
+        item = self.get_object(pk)
+        if not item:
+            return Response({"Error":"Item not Found (:"})
+        
         # Update the item 
         serializer=ItemSerializer(item,data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
 
-    elif request.method == "DELETE":
+    def delete(self,request,pk):
+        item = self.get_object(pk)
+        if not item:
+            return Response({"Error":"Item not Found (:"})
+
         # Delete the item 
         item.delete()
         return Response({"Item deleted successfully ^_^"})
+        
+        
+
+
+
+
+
+
+
+# @api_view(["GET","POST"])
+# def item_list_api(request):
+#     if request.method == "GET":
+#         # Get all items
+#         items = Item.objects.all()
+#         # converting data to json format
+#         serializer=ItemSerializer(items,many=True)
+#         return Response(serializer.data)
+#     elif  request.method == "POST":
+#         # Create new item
+#         serializer =  ItemSerializer(data=request.data)
+#         # Check if json data for new item valid or not 
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data) 
+
+
+
+
+# @api_view(["GET","PUT","DELETE"])
+# def item_detail_api(request,pk):
+
+#     # Select the item
+#     item = Item.objects.get(pk=pk)
+
+#     if request.method == "GET":
+#         # Get one item with its id
+#         serializer=ItemSerializer(item)
+#         return Response(serializer.data)
+
+#     elif request.method == "PUT":
+#         # Update the item 
+#         serializer=ItemSerializer(item,data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data)
+
+#     elif request.method == "DELETE":
+#         # Delete the item 
+#         item.delete()
+#         return Response({"Item deleted successfully ^_^"})
 
 
 
 
 # ---------------------------------------------------------------------
 
-def item_list_json(request):
-    items = Item.objects.all().values("id","item_name","item_desc","item_price")
-    return JsonResponse(list(items),safe=False)
+# def item_list_json(request):
+#     items = Item.objects.all().values("id","item_name","item_desc","item_price")
+#     return JsonResponse(list(items),safe=False)
 
 
 
