@@ -19,26 +19,39 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from rest_framework import generics
+from rest_framework import viewsets
 
 
 # Create your views here.
 
 logger = logging.getLogger(__name__)
 
+
+
+
+
+
 # =================================================== API =================================================
+
+
+# ========================== CRUD using ModelviewSet ========================
+
+class ItemViewSet(viewsets.ModelViewSet):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
 
 # ========================== CRUD using MIXIN ========================
 
-# get all & Create 
-class ItemListCreateAPI(generics.ListCreateAPIView):
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
+# # get all & Create 
+# class ItemListCreateAPI(generics.ListCreateAPIView):
+#     queryset = Item.objects.all()
+#     serializer_class = ItemSerializer
 
 
-# get the item & Update & Delete
-class ItemRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
+# # get the item & Update & Delete
+# class ItemRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Item.objects.all()
+#     serializer_class = ItemSerializer
 
 
 
