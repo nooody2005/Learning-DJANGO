@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    'rest_framework.authtoken',
     'users.apps.UsersConfig',
     'myapp.apps.MyappConfig',
     'django.contrib.admin',
@@ -198,7 +199,8 @@ LOGGING = {
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES":[
-        "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
     ],
     "DEFUALT_PERMISSION_CLASSES":[
         "frame_work.permissions.AllowAny",
