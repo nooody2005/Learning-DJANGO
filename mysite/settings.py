@@ -193,3 +193,14 @@ LOGGING = {
         "level": "DEBUG",
     },
 }
+
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    "DEFUALT_PERMISSION_CLASSES":[
+        "frame_work.permissions.AllowAny",
+    ]
+}
