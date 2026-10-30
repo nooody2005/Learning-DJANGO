@@ -2416,3 +2416,110 @@ Traceback (most recent call last):
     )
 RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 Watching for file changes with StatReloader
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Unauthorized: /myapp/api/items/
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /myapp/api/items/28
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/myapp/api/items/28/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /myapp/api/items/28/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\generics.py", line 103, in get_object
+    self.check_object_permissions(self.request, obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 350, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\mysite\myapp\permissions.py", line 7, in has_object_permission
+    if request.method in permission.SAFE_METHODS:
+                         ^^^^^^^^^^
+NameError: name 'permission' is not defined. Did you mean: 'permissions'?
+Internal Server Error: /myapp/api/items/28/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\generics.py", line 103, in get_object
+    self.check_object_permissions(self.request, obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 350, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\mysite\myapp\permissions.py", line 7, in has_object_permission
+    if request.method in permission.SAFE_METHODS:
+                         ^^^^^^^^^^
+NameError: name 'permission' is not defined. Did you mean: 'permissions'?
+D:\Progrmming\DJANGO\mysite\myapp\permissions.py changed, reloading.
+Watching for file changes with StatReloader
