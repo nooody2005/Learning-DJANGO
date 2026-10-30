@@ -2278,3 +2278,141 @@ Watching for file changes with StatReloader
 D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+Unauthorized: /myapp/api/items/
+Unauthorized: /myapp/api/items/
+Bad Request: /myapp/api/items/
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /myapp/api/token/
+Bad Request: /myapp/api/token/
+Unauthorized: /myapp/api/token/
+Internal Server Error: /myapp/api/token/refresh
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/token/refresh/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /myapp/api/items
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\utils\deprecation.py", line 443, in __call__
+    response = self.process_response(request, response)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/myapp/api/items/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Watching for file changes with StatReloader
