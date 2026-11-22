@@ -14,5 +14,15 @@ class ItemSerializer(serializers.ModelSerializer):
         model = Item
         fields = ["id","user_name","item_name","item_desc","item_price","item_image"]
 
+    def validate_item_price(self,value):
+        if value<0:
+            raise serializers.ValidationError("Price must be greater than zesro")
+        return value
+
+    def validate(self,data):
+        if data['item_name'].lower()==data['item_desc'].lower():
+            raise serializers.ValidationError("Item name and descriprion must be different")
+        return data
+
 
 
