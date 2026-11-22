@@ -2523,3 +2523,157 @@ Traceback (most recent call last):
 NameError: name 'permission' is not defined. Did you mean: 'permissions'?
 D:\Progrmming\DJANGO\mysite\myapp\permissions.py changed, reloading.
 Watching for file changes with StatReloader
+Forbidden: /myapp/api/items/28/
+Forbidden: /myapp/api/items/28/
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /myapp/items
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader

@@ -48,6 +48,11 @@ class ItemViewSet(viewsets.ModelViewSet):
     # permission_classes = [IsAuthenticatedOrReadOnly]
     permission_classes = [IsOwnerOrReadOnly]
 
+
+    # override the automatically save operation
+    def perform_create(self,serializer):
+        serializer.save(user_name=self.request.user)
+
 # ========================== CRUD using MIXIN ========================
 
 # # get all & Create 
