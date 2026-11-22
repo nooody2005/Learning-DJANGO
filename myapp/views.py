@@ -24,6 +24,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.authentication import TokenAuthentication
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from .permissions import IsOwnerOrReadOnly
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 # Create your views here.
@@ -47,6 +48,8 @@ class ItemViewSet(viewsets.ModelViewSet):
     authentication_classes = [JWTAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]
     permission_classes = [IsOwnerOrReadOnly]
+    filter_backneds = [DjangoFilterBackend]
+    filterset_fields = ["item_name","item_price"]
 
 
     # override the automatically save operation
