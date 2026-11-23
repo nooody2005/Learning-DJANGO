@@ -2941,3 +2941,306 @@ D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
 Watching for file changes with StatReloader
 D:\Progrmming\DJANGO\mysite\myapp\serializers.py changed, reloading.
 Watching for file changes with StatReloader
+Bad Request: /myapp/api/items/
+Bad Request: /myapp/api/items/
+Bad Request: /myapp/api/items/
+Internal Server Error: /myapp/api/items/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\mysite\myapp\views.py", line 60, in perform_create
+    serializer.save(user_name=self.request.user)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\serializers.py", line 1020, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\query.py", line 711, in create
+    obj = self.model(**kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\base.py", line 586, in __init__
+    _setattr(self, field.name, rel_obj)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 307, in __set__
+    raise ValueError(
+    ...<7 lines>...
+    )
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x000001F9A8396CF0>": "Item.user_name" must be a "User" instance.
+Internal Server Error: /myapp/api/items/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\mysite\myapp\views.py", line 60, in perform_create
+    serializer.save(user_name=self.request.user)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\serializers.py", line 1020, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\query.py", line 711, in create
+    obj = self.model(**kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\base.py", line 586, in __init__
+    _setattr(self, field.name, rel_obj)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 307, in __set__
+    raise ValueError(
+    ...<7 lines>...
+    )
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x000001F9A862BC50>": "Item.user_name" must be a "User" instance.
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /myapp/api/items/
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Too Many Requests: /myapp/api/items/
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Progrmming\DJANGO\mysite\myapp\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Importing AvifImagePlugin
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Internal Server Error: /myapp/api/items/
+Traceback (most recent call last):
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\mysite\myapp\views.py", line 62, in perform_create
+    serializer.save(user_name=self.request.user)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\rest_framework\serializers.py", line 1020, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\query.py", line 711, in create
+    obj = self.model(**kwargs)
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\base.py", line 586, in __init__
+    _setattr(self, field.name, rel_obj)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Progrmming\DJANGO\env\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 307, in __set__
+    raise ValueError(
+    ...<7 lines>...
+    )
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x0000024141E6B890>": "Item.user_name" must be a "User" instance.
+D:\Progrmming\DJANGO\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader

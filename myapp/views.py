@@ -26,6 +26,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from .permissions import IsOwnerOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter,SearchFilter
+from rest_framework.throttling import AnonRateThrottle,UserRateThrottle
 
 
 # Create your views here.
@@ -53,11 +54,12 @@ class ItemViewSet(viewsets.ModelViewSet):
     # filterset_fields = ["item_name","item_price"]
     # ordering_fields = ["item_name","item_price"]
     search_fields = ["item_name","item_price"]
+    trottle_classes = [AnonRateThrottle,UserRateThrottle]
 
 
     # override the automatically save operation
-    def perform_create(self,serializer):
-        serializer.save(user_name=self.request.user)
+    # def perform_create(self,serializer):
+    #     serializer.save(user_name=self.request.user)
 
 # ========================== CRUD using MIXIN ========================
 

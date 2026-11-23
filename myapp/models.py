@@ -27,7 +27,8 @@ class Item(models.Model):
     item_name = models.CharField(max_length=200,db_index=True)
     item_desc = models.CharField()
     item_price = models.DecimalField(max_digits=6,decimal_places=2,db_index=True)
-    item_image = models.URLField(max_length=500,default='https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png')
+    # item_image = models.URLField(max_length=500,default='https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png')
+    item_image=models.ImageField(upload_to='item_images/',blank=True,null=True)
     is_available= models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True) 
 

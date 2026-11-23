@@ -199,6 +199,14 @@ LOGGING = {
 
 
 REST_FRAMEWORK = {
+    "DEFAULT_THROTTLE_CLASSES":[
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle"
+    ],
+    "DEFAULT_THROTTLE_RATES":{
+        "anon":"10/minute",  #10 requsets per minute for  anonymous users (not logged in).
+        "user":"1000/day", #1000 requests per day for logged in users
+    },
     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 5,
