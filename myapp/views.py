@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
-from .models import Item
+from .models import Item,Order
 from .forms import ItemForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic.list import ListView
@@ -14,7 +14,7 @@ import logging
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.http import JsonResponse
-from .serializers import ItemSerializer
+from .serializers import ItemSerializer,OrderSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
@@ -60,6 +60,13 @@ class ItemViewSet(viewsets.ModelViewSet):
     # override the automatically save operation
     # def perform_create(self,serializer):
     #     serializer.save(user_name=self.request.user)
+# ======================================================================
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+
 
 # ========================== CRUD using MIXIN ========================
 

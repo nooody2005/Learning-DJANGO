@@ -11,6 +11,7 @@ app_name='myapp'
 
 router = DefaultRouter()
 router.register(r"items",views.ItemViewSet,basename='item')
+router.register(r"orders",views.OrderViewSet,basename='order')
 
 
 
